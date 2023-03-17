@@ -2,28 +2,40 @@
 
 /* basic css reset */
 html {
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* - Very dark cyan: hsl(183, 100%, 15%)
 - Dark grayish cyan: hsl(186, 14%, 43%)
@@ -33,37 +45,160 @@ html {
 - Strong cyan: hsl(172, 67%, 45%)
 /* /*   */
 
-:root{
---main-bg-color:hsl(185, 41%, 84%);
---main-white-color:hsl(0, 0%, 100%);
---main-v-dark-cyan:hsl(183, 100%, 15%);
+:root {
+  --main-bg-color: hsl(185, 41%, 84%);
+  --main-white-color: hsl(0, 0%, 100%);
+  --main-v-dark-cyan: hsl(183, 100%, 15%);
+  --main-strong-cyan: hsl(172, 67%, 45%);
+  --main-v-light-cyan: hsl(189, 41%, 97%);
+  --main-l-grey-cyan: hsl(185, 41%, 84%);
+  --main-greyish-cyan: hsl(184, 14%, 56%);
+  --main-dark-gray-cyan:hsl(186, 14%, 43%);
 }
 body {
   font-family: "Space Mono", monospace;
   background-color: var(--main-bg-color);
-  
 }
-.calculator{
+
+h2 {
+  color: var(--main-v-dark-cyan);
+  text-align: center;
+}
+
+.calculator {
   background-color: var(--main-white-color);
-  width: 60%;
+  width: 40%;
+  height: 5;
   margin: 50px auto;
   padding: 20px 0;
   border-radius: 10px;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: center;
+  gap: 5px;
+}
+/* input side of calculator */
+.input-side {
+  /* background-color: aquamarine; */
+  /* padding: 40px 20px; */
+  height:300px;
+  width:300px;
+  
 }
 
-.input-side{
-  background-color: aquamarine;
+.input-amount-dollar,.number-of-people-amount {
+  position: relative;
+  
 }
-.output-side{
-  background-color:var(--main-v-dark-cyan);
+
+.input-amount-dollar::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: url(images/icon-dollar.svg) center / contain no-repeat;
+}
+#input-amount,#number-of-people {
+  padding: 5px 30px 5px 50px;
+  text-align: right;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid transparent;
+  background-color: var(--main-v-light-cyan);
+  outline:none;
+  width: 100%;
+}
+
+#input-amount:focus,#number-of-people:focus {
+  border: 2px solid var(--main-strong-cyan);
+}
+
+
+.number-of-people-amount::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: url(images/icon-person.svg) center / contain no-repeat;
+}
+
+
+.grid-item-input {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.percent-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 10px 10px;
+}
+
+.percents:last-child {
+  background-color: var(--main-v-light-cyan);
+  color: var(--main-dark-gray-cyan);
+  font-weight: bold;
+}
+
+.percents {
+  background-color: var(--main-v-dark-cyan);
+  color: var(--main-white-color);
+  width: 5rem;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* output sid of calculator */
+
+.output-side {
+  background-color: var(--main-v-dark-cyan);
   border-radius: 10px;
+  width: 40%;
 }
+
+.reset-container{
+  
+}
+
+button{
+  width: 80%;
+  margin: 20px 20px;
+  padding: 5px 0;
+  background-color: var(--main-strong-cyan);
+  color: var(--main-v-dark-cyan);
+  border: none;
+  border-radius:5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/*  credits section  */
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }

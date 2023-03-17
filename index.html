@@ -15,37 +15,41 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <h1>SPLITTER</h1>
+    <h2>SPLITTER</h2>
     <div class="calculator">
       <section class="input-side">
         <div class="grid-item-input">
-          <label for="input-amount">Bill</label>
+          <label for="input-amount" >Bill</label>
+          <label class="input-amount-dollar">
           <input type="number" name="amount" id="input-amount" />
+        </label>
         </div>
         <div class="grid-item-input">
           <label for="tip-amount">Select Tip %</label>
           <div class="percent-container" id="tip-amount">
-            <div>5%</div>
-            <div>10%</div>
-            <div>15%</div>
-            <div>25%</div>
-            <div>50%</div>
-            <div>Custom</div>
+            <div class="percents" data-five="5">5%</div>
+            <div class="percents" data-ten="10">10%</div>
+            <div class="percents" data-fifteen="15">15%</div>
+            <div class="percents" data-twenty-five="25">25%</div>
+            <div class="percents"data-fifty="50">50%</div>
+            <div class="percents" data-custom = "100">Custom</div>
           </div>
         </div>
         <div class="grid-item-input">
           <label for="number-of-people">Number of People</label>
+          <label for="" class="number-of-people-amount">
           <input type="number" name="" id="number-of-people" />
+        </label>
         </div>
       </section>
       <section class="output-side">
         <div class="grid-item-output tip-output">
           <span class="output-label">Tip Amount</span>
           <span class="output-label">/ person</span>
-          <span class="output-result">$0</span>
+          <span class="output-result">$0.00</span>
           <span class="output-label">Total</span>
           <span class="output-label">/ person</span>
-          <span class="output-result">$0</span>
+          <span class="output-result">$0.00</span>
         </div>
         <div class="grid-item-output reset-container">
           <button type="reset" class="reset-button">Reset</button>
