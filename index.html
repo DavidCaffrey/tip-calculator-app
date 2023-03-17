@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Tip calculator app</title>
-
-</head>
-<body>
-  <h1>Tip Calculator</h1>
-  <div class="calculator">
-    <div class="input-side">
-      <label for="input-amount">Bill</label>
-      <input type="number" name="amount" id="input-amount">
-      <label></label>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1>SPLITTER</h1>
+    <div class="calculator">
+      <section class="input-side">
+        <div class="grid-item-input">
+          <label for="input-amount">Bill</label>
+          <input type="number" name="amount" id="input-amount" />
+        </div>
+        <div class="grid-item-input">
+          <label for="tip-amount">Select Tip %</label>
+          <div class="percent-container" id="tip-amount">
+            <div>5%</div>
+            <div>10%</div>
+            <div>15%</div>
+            <div>25%</div>
+            <div>50%</div>
+            <div>Custom</div>
+          </div>
+        </div>
+        <div class="grid-item-input">
+          <label for="number-of-people">Number of People</label>
+          <input type="number" name="" id="number-of-people" />
+        </div>
+      </section>
+      <section class="output-side">
+        <div class="grid-item-output tip-output">
+          <span class="output-label">Tip Amount</span>
+          <span class="output-label">/ person</span>
+          <span class="output-result">$0</span>
+          <span class="output-label">Total</span>
+          <span class="output-label">/ person</span>
+          <span class="output-result">$0</span>
+        </div>
+        <div class="grid-item-output reset-container">
+          <button type="reset" class="reset-button">Reset</button>
+        </div>
+      </section>
+         
     </div>
-    <div class="ouput-side"></div>
-  </div>
 
-  
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">David Caffrey</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">David Caffrey</a>.
+    </div>
+  </body>
 </html>
