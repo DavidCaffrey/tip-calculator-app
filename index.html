@@ -5,66 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Tip calculator app</title>
-  </head>
-  <body>
-    <main>
-    <h2>SPLITTER</h2>
-    <article class="calculator">
-      <section class="input-side">
-        <div class="grid-item-input">
-          <label for="input-amount" >Bill</label>
-          <label class="input-amount-dollar">
-          <input type="number" name="amount" id="input-amount" />
-        </label>
-        </div>
-        <div class="grid-item-input">
-          <label for="tip-amount">Select Tip %</label>
-          <div class="percent-container" id="tip-amount">
-            <div class="percents" data-five="5">5%</div>
-            <div class="percents" data-ten="10">10%</div>
-            <div class="percents" data-fifteen="15">15%</div>
-            <div class="percents" data-twenty-five="25">25%</div>
-            <div class="percents"data-fifty="50">50%</div>
-            <div class="percents" data-custom = "100">Custom</div>
-          </div>
-        </div>
-        <div class="grid-item-input">
-          <label for="number-of-people">Number of People</label>
-          <label for="" class="number-of-people-amount">
-          <input type="number" name="" id="number-of-people" />
-        </label>
-        </div>
-      </section>
-      <section class="output-side">
-        <div class="grid-item-output tip-output">
-          <span class="output-label">Tip Amount</span>
-          <span class="output-label">/ person</span>
-          <span class="output-result">$0.00</span>
-          <span class="output-label">Total</span>
-          <span class="output-label">/ person</span>
-          <span class="output-result">$0.00</span>
-        </div>
-        <div class="grid-item-output reset-container">
-          <button type="reset" class="reset-button">Reset</button>
-        </div>
-      </section>
-         
-    </article>
-  </main>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">David Caffrey</a>.
+</head>
+<body>
+  <h1>Tip Calculator</h1>
+  <div class="calculator">
+    <div class="input-side">
+      <label for="input-amount">Bill</label>
+      <input type="number" name="amount" id="input-amount">
+      <label></label>
     </div>
-  </body>
+    <div class="ouput-side"></div>
+  </div>
+
+  
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">David Caffrey</a>.
+  </div>
+</body>
 </html>
