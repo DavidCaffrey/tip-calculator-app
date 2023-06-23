@@ -60,7 +60,33 @@ body {
   background-color: var(--main-bg-color);
 }
 
+main{
+  /* display: grid;
+  align-items: center;
+  justify-content: center; */
+}
 
+.title{
+  max-width: 70px;
+  overflow-wrap: break-word;
+  
+}
+
+.tip-calculator {
+  background-color:var(--main-white-color);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.input-side{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.button-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 /*  credits section  */
 

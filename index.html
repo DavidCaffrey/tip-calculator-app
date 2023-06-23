@@ -16,22 +16,24 @@
   </head>
   <body>
     <main>
-      <h2>splitter</h2>
+      <h2 class="title">splitter</h2>
       <article class="tip-calculator">
         <!-- Input side of Calculator -->
         <form class="input-side">
-          <label for="bill-amount">Bill</label>
+          <label for="bill-amount" class="bill-amount">Bill</label>
           <input type="number" name="" id="bill-amount" />
           <h3>Select Tip %</h3>
-          <button class="btn">5%</button>
-          <button class="btn">10%</button>
-          <button class="btn">15%</button>
-          <button class="btn">25%</button>
-          <button class="btn">50%</button>
-          <button class="btn">Custom</button>
+          <div class="button-container">
+            <button class="btn">5%</button>
+            <button class="btn">10%</button>
+            <button class="btn">15%</button>
+            <button class="btn">25%</button>
+            <button class="btn">50%</button>
+            <button class="btn">Custom</button>
+          </div>
           <label for="">Number of People</label>
           <input type="number" />
-      </form>
+        </form>
         <!-- Output side of calculator -->
 
         <form class="output-side">
@@ -43,8 +45,6 @@
         </form>
       </article>
     </main>
-
-     
 
     <div class="attribution">
       Challenge by
