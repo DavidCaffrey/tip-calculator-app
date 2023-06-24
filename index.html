@@ -27,27 +27,29 @@
           <h3>Select Tip %</h3>
 
           <div class="button-container">
-            <button class="btn">5%</button>
-            <button class="btn">10%</button>
-            <button class="btn">15%</button>
-            <button class="btn">25%</button>
-            <button class="btn">50%</button>
-            <button class="btn">Custom</button>
+            <button class="btn" data-value="5">5%</button>
+            <button class="btn" data-value="10">10%</button>
+            <button class="btn" data-value="15">15%</button>
+            <button class="btn" data-value="25">25%</button>
+            <button class="btn" data-value="50">50%</button>
+            <input class="btn custom-btn" type="number" placeholder="custom"/>
           </div>
           <label for="person-amount" class="person-amount">Number of People</label>
           <div class="person-symbol">
             <input type="number" id="person-amount" class="input-field" placeholder="0" />
           </div>
-        </form>
-        <!-- Output side of calculator -->
-
-        <form class="output-side">
-          <label for="">Tip Amount <span>/ person</span></label>
-          <output class>0</output>
-          <label for="">Total <span>/ person</span></label>
-          <output class="">0</output>
+          <div class="output-side">
+          <label for="">Tip Amount <span class="per-person">/ person</span></label>
+          <output class="" for="" id="amount-output">0</output>
+          <label for="">Total <span class="per-person">/ person</span></label>
+          <output class=""   id="total-output">0</output>
           <button type="reset" class="btn btn-reset">Reset</button>
+        </div>
         </form>
+      
+
+       
+       
       </article>
     </main>
 

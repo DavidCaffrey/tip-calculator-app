@@ -147,6 +147,7 @@ main{
 .output-side{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: var(--main-v-dark-cyan);
 }
 
 .btn-reset{
