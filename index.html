@@ -21,8 +21,11 @@
         <!-- Input side of Calculator -->
         <form class="input-side">
           <label for="bill-amount" class="bill-amount">Bill</label>
-          <input type="number" name="" id="bill-amount" />
+          <div class="dollar-symbol">
+            <input type="number" name="" id="bill-amount" class="input-field" placeholder="0" />
+          </div>
           <h3>Select Tip %</h3>
+
           <div class="button-container">
             <button class="btn">5%</button>
             <button class="btn">10%</button>
@@ -31,17 +34,19 @@
             <button class="btn">50%</button>
             <button class="btn">Custom</button>
           </div>
-          <label for="">Number of People</label>
-          <input type="number" />
+          <label for="person-amount" class="person-amount">Number of People</label>
+          <div class="person-symbol">
+            <input type="number" id="person-amount" class="input-field" placeholder="0" />
+          </div>
         </form>
         <!-- Output side of calculator -->
 
         <form class="output-side">
-          <label for="">Tip Amount / person</label>
-          <output class></output>
-          <label for="">Total / person</label>
-          <output class=""></output>
-          <button type="reset">Reset</button>
+          <label for="">Tip Amount <span>/ person</span></label>
+          <output class>0</output>
+          <label for="">Total <span>/ person</span></label>
+          <output class="">0</output>
+          <button type="reset" class="btn btn-reset">Reset</button>
         </form>
       </article>
     </main>
