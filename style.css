@@ -37,14 +37,6 @@ img {
   height: auto;
 }
 
-/* - Very dark cyan: hsl(183, 100%, 15%)
-- Dark grayish cyan: hsl(186, 14%, 43%)
-- Grayish cyan: hsl(184, 14%, 56%)
-- Light grayish cyan: hsl(185, 41%, 84%)
-- Very light grayish cyan: hsl(189, 41%, 97%)
-- Strong cyan: hsl(172, 67%, 45%)
-/* /*   */
-
 :root {
   --main-bg-color: hsl(185, 41%, 84%);
   --main-white-color: hsl(0, 0%, 100%);
@@ -53,30 +45,30 @@ img {
   --main-v-light-cyan: hsl(189, 41%, 97%);
   --main-l-grey-cyan: hsl(185, 41%, 84%);
   --main-greyish-cyan: hsl(184, 14%, 56%);
-  --main-dark-gray-cyan:hsl(186, 14%, 43%);
+  --main-dark-gray-cyan: hsl(186, 14%, 43%);
 }
 body {
   font-family: "Space Mono", monospace;
   background-color: var(--main-bg-color);
 }
 
-main{
+main {
   display: grid;
   align-items: center;
   justify-content: center;
 }
 
-.title{
+.title {
   max-width: 70px;
   overflow-wrap: break-word;
   text-transform: uppercase;
-  color:var(--main-dark-gray-cyan);
+  color: var(--main-dark-gray-cyan);
   font-weight: bold;
   margin: 0 auto;
 }
 
 .tip-calculator {
-  background-color:var(--main-white-color);
+  background-color: var(--main-white-color);
   display: grid;
   grid-template-columns: 1fr;
   border-radius: 5px 5px 0 0;
@@ -84,31 +76,42 @@ main{
   max-width: 400px;
 }
 
-.input-side{
+.input-side {
   display: grid;
   grid-template-columns: 1fr;
 }
 /* For placing $ in input field */
-.dollar-symbol{
+.dollar-symbol {
   position: relative;
 }
-.dollar-symbol::before{
+.dollar-symbol::before {
   content: url(./images/icon-dollar.svg);
   position: absolute;
   top: 10px;
-  left:10px;
+  left: 10px;
   z-index: 1;
 }
 
-.input-field{
+.input-field {
   background-color: var(--main-v-light-cyan);
   border: none;
   width: 100%;
-  height: 40px
+  height: 40px;
+  direction: rtl;
+  cursor: pointer;
+  caret-color: transparent;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--main-v-dark-cyan);
 }
 
-.input-field::placeholder{
-  color:var(--main-greyish-cyan);
+.input-field:focus {
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: var(--main-greyish-cyan);
   position: absolute;
   right: 5px;
   font-family: "Space Mono", monospace;
@@ -116,44 +119,98 @@ main{
 }
 
 /* For placing person symbol in input field */
-.person-symbol{
+.person-symbol {
   position: relative;
 }
-.person-symbol::before{
+.person-symbol::before {
   content: url(./images/icon-person.svg);
   position: absolute;
   top: 10px;
-  left:10px;
+  left: 10px;
   z-index: 1;
 }
 
-.button-container{
+.button-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.btn{
+.btn-reset {
+  grid-column: 1/3;
+}
+
+.btn {
   /* buttons need to inherit font */
   font-family: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
   border: none;
   border-radius: 5px;
-  color: white !important;
+  color: white;
   background-color: var(--main-v-dark-cyan);
   width: 90%;
   height: 40px;
+  cursor: pointer;
 }
 
-.output-side{
+.btn:visited {
+}
+
+.btn:hover {
+  background-color: hsl(173, 61%, 77%);
+  color: var(--main-v-dark-cyan);
+}
+.btn:focus {
+  background-color: var(--main-strong-cyan);
+  color: var(--main-v-dark-cyan);
+}
+
+.btn:active {
+}
+
+.custom-btn {
+  color: var(--main-dark-gray-cyan);
+  background-color: var(--main-v-light-cyan);
+  direction: rtl;
+}
+
+.custom-btn:hover {
+  border: 2px solid var(--main-strong-cyan);
+  background-color: var(--main-v-light-cyan);
+}
+
+.custom-btn:focus {
+  background-color: var(--main-v-light-cyan);
+
+  outline: 2px solid var(--main-strong-cyan);
+  border: none;
+}
+
+.custom-btn:active{
+  outline: 1px solid var(--main-strong-cyan);
+ 
+}
+
+.output-side {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: var(--main-v-dark-cyan);
 }
 
-.btn-reset{
-  grid-column: 1/3;
+/* util to remove arrows from inputs w3schools */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 /*  credits section  */
 
